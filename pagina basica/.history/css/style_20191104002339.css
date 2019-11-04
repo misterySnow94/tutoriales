@@ -36,12 +36,11 @@ form{
     padding: 10px;
 }
 
-label, input, h3 , select{
+label, input, h3{
     margin-left: 20px;
 }
 
-input, select{
-    margin-left: 50px;
+input{
     border-radius: 5px;
     height: 30px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -66,6 +65,6 @@ button:hover{
 }
 
 .radio{
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
 }

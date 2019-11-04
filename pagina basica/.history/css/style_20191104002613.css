@@ -40,8 +40,7 @@ label, input, h3 , select{
     margin-left: 20px;
 }
 
-input, select{
-    margin-left: 50px;
+input{
     border-radius: 5px;
     height: 30px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

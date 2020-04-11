@@ -1,0 +1,63 @@
+h1{
+  color: blue;
+}
+
+h2{
+  text-align: center;
+}
+h3{
+  text-align: center;
+  color: red;
+}
+
+h4{
+  text-align: center;
+  color: black;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ui-small{
+  height: 20px;
+  width: 20px;
+  margin-left: 20px;
+}
+
+.mat-form-field {
+  width: 50%;
+  padding-left: 25%;
+  text-align: center;
+}
+
+button {
+  width: 100%;
+  height: 100%;
+  margin: 2%;
+}
+
+.h6 {
+  font-size: 100%;
+  text-align: center;
+}
+
+.ui-small{
+  height: 20px;
+  width: 20px;
+  margin-left: 20px;
+  text-align: center;
+}
+
+p-fileUpload{
+  text-align: center;
+}

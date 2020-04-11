@@ -1,0 +1,55 @@
+<div class="p-grid">
+  <div class="p-col-6 p-offset-3">
+    <h1 class="lead">Hola Bienvenido al sistema de trampas de Wilson</h1>
+    <h3 class="lead">Wilson a ideado una forma de engañar siempre a Julie, y para ayudarte a hacer lo mismo esta este sitio, solo debes escribir tu cedula y subir un archivo txt con la informacion adecuada, y se creara un registro en bases de datos, ademas de que podras ver cuantos viajes podras realizar cada dia, para ganar al maximo (sin ser descubiertos obviamente)</h3>
+    <div class="p-col">
+      <div class="box">
+        <span >
+          <label>Cedula </label>
+          <input [(ngModel)]="cedula" oninput="this.value=this.value.replace(/[^0-9]/g,'');" id="float-input" type="text" size="30" pInputText>
+        </span>
+      </div>
+    </div>
+    <div class="box">
+      <div class="form-group">
+        <input type="file"
+              id="file"
+              (change)="handleFileInput($event.target.files)">
+      </div>
+      <br>
+      <p-button *ngIf="fileToUpload !== null && cedula != ''" label="Analizar" (click)="enviarArchivo()" ></p-button>
+    </div>
+  </div>
+  <div class="p-col-6 p-offset-3" *ngIf="trabajo !== null">
+    <div class="box">
+      <p>Dias de trabajo: {{trabajo.diasTrabajo}}</p>
+    </div>
+    <div class="box">
+      <p>Fecha de registro: {{trabajo.fechaRegistro}}</p>
+    </div>
+    <div class="box">
+      <p>Cedula del trabajador: {{trabajo.trabajador.cedula}}</p>
+    </div>
+    <div class="p-col" *ngFor="let dia of trabajo.dias; let i=index">
+      <div class="box">
+        <p>dia: {{ i + 1}}</p>
+        <p>Cantidad elementos: {{dia.elementos}}</p>
+        <p>lista de pesos</p>
+        <div class="p-grid" style="margin-top: .5em">
+          <div class="p-col" *ngFor="let peso of dia.pesos" [@animation]="'visible'">
+            <div class="box">{{peso}}</div>
+          </div>
+        </div>
+      </div>
+      <div class="box">
+        <p>cantidad de viajes: {{dia.viajesDia}}</p>
+      </div>
+    </div>
+    <div class="p-col-6 p-offset-3">
+      <div class="box">
+        <p-button  label="Descargar archivo" (click)="descargarArchivo()" ></p-button>
+      </div>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
